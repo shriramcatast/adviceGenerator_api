@@ -1,0 +1,71 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    background-color: hsl(218, 23%, 16%);
+    display:flex;
+    justify-content: center;
+    align-content:center;
+    font-family: 'Manrope',Arial, Helvetica, sans-serif;
+}
+.card{
+    max-width: 500px;
+    height: 350px;
+    background-color: hsl(217, 19%, 24%);
+    position:absolute;
+    top:30%;
+    border-radius: 20px;
+    display: grid;
+    grid-template-rows: 25% 45% 15% 15%;
+    grid-template-columns: auto;
+    grid-template-areas: 
+    "header"
+    "advice"
+    "line"
+    "cube";
+}
+.header{
+    grid-area: header;
+    color: hsl(150, 100%, 66%);
+    place-self: center;
+    letter-spacing: 3px;
+}
+.advice{
+    grid-area: advice;
+    color: white;
+    place-self:start;
+    padding: 20px;
+    font-size: 28px;
+    font-weight: 800;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+.line{
+    grid-area: line;
+    place-self: center;
+}
+.cube{
+    grid-area: cube;
+    width:60px;
+    height:60px;
+    place-self: center;
+    background-color: hsl(150, 100%, 66%);
+    position: absolute;
+    border-radius: 50%;
+    bottom:-25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cube:hover{
+    filter: drop-shadow(0 0 25px hsl(150, 100%, 66%));
+}
+.doneby{
+    color:white;
+    font-family: 'Manrope',Arial, Helvetica, sans-serif;
+    position: absolute;
+    bottom:2%;
+}
